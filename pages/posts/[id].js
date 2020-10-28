@@ -26,7 +26,7 @@ export default function Post({ postData }) {
 //[id]ではどんなページを表示する可能性があるか判断
 // どんなidを持つ配列なのかがreturnされる
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   return {
     paths,
     fallback: false, //falseにすると適当なパスに飛んだら404が表示される
